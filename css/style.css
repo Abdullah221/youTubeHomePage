@@ -1,0 +1,224 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "roboto", Arial, Helvetica, sans-serif;
+}
+body {
+    width: 100vw;
+    position: relative;
+    height: auto;
+}
+/* Header Section */
+.fullHeader {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    position: sticky;
+    top: 0px;
+}
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.leftTopBar {
+    align-content: center;
+    width: 25%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.leftTopBar button {
+    border-radius: 50px;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
+    padding: 5px;
+    border: none;
+    margin: 10px;
+}
+.leftTopBar button:hover {
+    box-shadow: 2px 2px 5px #ddd;
+    background-color: #ddd;
+}
+.leftTopBar img {
+    width: 100px;
+}
+.centerTopBar {
+    width: 50%;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.centerTopBar input[type= Text] {
+    height: 50%;
+    width: 50%;
+    border-radius: 50px 0px 0px 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+}
+.cross {
+    display: none;
+}
+.centerTopBar input[type= text]:focus{
+    border: 2px solid red;
+    outline:none;
+    box-sizing: border-box;
+}
+.centerTopBar input[type= text]:focus .cross{
+    display: block;
+}
+.centerTopBar #Search {
+    height: 50%;
+    border-radius: 0px 50px 50px 0px;
+    padding: 10px;
+    border: 2px solid #ddd;
+}
+.centerTopBar .voiceButton {
+    height: 50%;
+    width: 50px;
+    border-radius: 50px;
+    border: none;
+}
+.voiceButton:hover {
+    background-color: #ddd;
+}
+.rightTopBar {
+    width: 25%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.rightTopBar button {
+    width: 50px;
+    height: 50%;
+    border-radius: 50px;
+    font-size: 1.2em;
+    border: none;
+    margin: 0px 10px;
+}
+.rightTopBar button:hover {
+    background-color: #ddd;
+}
+.column1 {
+    width: 8%;
+    float: left;
+    height: calc(100vh - 80px);
+    position: sticky;
+    overflow: auto;
+    top: 80px;
+}
+.column1 button {
+    width: 100%;
+    display: block;
+    font-size: 1em;
+    border: none;
+    padding: 10px 0px;
+    margin: 5px auto;
+    background-color: #fff;
+}
+.column1 button:hover {
+    background-color: #ddd;
+}
+.icon {
+    font-size: 1.3em;
+}
+
+/* Column 2 section */
+.trendTags {
+    padding: 10px;
+}
+.trendTags a {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+    text-decoration: none;
+    color: black;
+    margin: 0px 5px;
+}
+.trendTags a:hover {
+    background-color: #ddd;
+    font-weight: 500;
+}
+.column2 {
+    width: 90%;
+    float: right;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    /* background-color: red; */
+}
+.videoPos {
+    margin: 10px auto;
+    width: 24%;
+    min-width: 300px;
+    overflow: hidden;
+    background-color: #000;
+    transition: 1s;
+    border-radius: 20px 20px 0px 0px;
+}
+.videoPos video {
+    width: 100%;
+}
+.videoPos:hover {
+    border-radius: 0px;
+    transition: 1s;
+}
+.details {
+    display: flex;
+    background-color: #fff;
+    padding: 10px;
+    color: black;
+}
+.details img {
+    padding: 5px 0px;
+}
+.detail {
+    padding: 0px 10px;
+}
+.detail h2 {
+    font-size: 1.5em;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+}
+.detail h3, .detail p {
+    font-size: 1em;
+    color: #888;
+}
+@media only screen and (max-width:700px) {
+    .column1 {
+        display: block;
+        background-color:#fff;
+        width: 100%;
+        text-align: center;
+        height: auto;
+    }
+    .column1 button {
+        display: inline-block;
+        height: 50px;
+        width: 24%;
+        padding: 5px;
+        box-sizing: border-box;
+        margin: 0px;
+    }
+    .trendTags {
+        text-align: center;
+    }
+    .logo {
+        display: none;
+    }
+    .leftTopBar .more{
+        display: block;
+    }
+    .rightTopBar .notification, .rightTopBar .video {
+        display: none;
+    }
+    .centerTopBar {
+        width: 80%;
+    }
+}
